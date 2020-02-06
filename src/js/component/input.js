@@ -8,7 +8,7 @@ export function Input() {
 		//defines a function to run the fetch any time I needed. Dry code. GET is the default status
 		fetch("https://assets.breatheco.de/apis/fake/todos/user/aleaguilar") //This is the endpoint where I'm pulling the API data. It only runs once
 			.then(response => response.json()) //Start a promise that upon reaching a determination (the response) of the fetch, it will show
-			.then(data => {
+			.then(data => { //.then takes whatever is returned from the previous .then and uses it as input
 				setList(data);
 			}); //setting the content of the endpoint as the new array
 	};
